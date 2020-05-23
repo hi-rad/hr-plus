@@ -247,7 +247,7 @@
                 if (this.commentsSocket !== null) {
                     this.closeSocket();
                 }
-                this.commentsSocket = new WebSocket(`ws://localhost:8888/ws/comments/${this.item.id}/`);
+                this.commentsSocket = new WebSocket(`process.env.VUE_APP_SOCKET_ROOT/comments/${this.item.id}/`);
 
                 this.commentsSocket.onopen = () => {
                     // Connected
